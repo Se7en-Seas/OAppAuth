@@ -7,3 +7,6 @@
 [submodule "lib/solmate"]
 	path = lib/solmate
 	url = https://github.com/transmissions11/solmate
+[submodule "lib/LayerZero-V2"]
+	path = lib/LayerZero-V2
+	url = https://github.com/LayerZero-Labs/LayerZero-V2
