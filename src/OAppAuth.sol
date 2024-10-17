@@ -21,7 +21,7 @@ abstract contract OAppAuth is OAppAuthSender, OAppAuthReceiver {
      * @param _delegate The delegate capable of making OApp configurations inside of the endpoint.
      */
     constructor(address _endpoint, address _delegate, address _owner, address _authority)
-        OAppAuthCore(_endpoint, _delegate, _owner, _authority)
+        OAppAuthCore(_endpoint, _delegate)
     {}
 
     /**

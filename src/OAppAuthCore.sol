@@ -20,14 +20,10 @@ abstract contract OAppAuthCore is IOAppCore, Auth {
      * @dev Constructor to initialize the OAppCore with the provided endpoint and delegate.
      * @param _endpoint The address of the LOCAL Layer Zero endpoint.
      * @param _delegate The delegate capable of making OApp configurations inside of the endpoint.
-     * @param _owner The address of the owner/admin of the OApp.
-     * @param _authority The address of the Authority contract.
      *
      * @dev The delegate typically should be set as the owner of the contract.
      */
-    constructor(address _endpoint, address _delegate, address _owner, address _authority)
-        Auth(_owner, Authority(_authority))
-    {
+    constructor(address _endpoint, address _delegate) {
         endpoint = ILayerZeroEndpointV2(_endpoint);
 
         if (_delegate == address(0)) revert InvalidDelegate();
