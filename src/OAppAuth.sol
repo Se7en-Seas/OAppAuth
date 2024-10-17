@@ -4,24 +4,24 @@ pragma solidity ^0.8.20;
 
 // @dev Import the 'MessagingFee' and 'MessagingReceipt' so it's exposed to OApp implementers
 // solhint-disable-next-line no-unused-import
-import {OAppSender, MessagingFee, MessagingReceipt} from "./OAppAuthSender.sol";
+import {OAppAuthSender, MessagingFee, MessagingReceipt} from "./OAppAuthSender.sol";
 // @dev Import the 'Origin' so it's exposed to OApp implementers
 // solhint-disable-next-line no-unused-import
-import {OAppReceiver, Origin} from "./OAppAuthReceiver.sol";
-import {OAppCore} from "./OAppAuthCore.sol";
+import {OAppAuthReceiver, Origin} from "./OAppAuthReceiver.sol";
+import {OAppAuthCore} from "./OAppAuthCore.sol";
 
 /**
  * @title OApp
  * @dev Abstract contract serving as the base for OApp implementation, combining OAppSender and OAppReceiver functionality.
  */
-abstract contract OAppAuth is OAppSender, OAppReceiver {
+abstract contract OAppAuth is OAppAuthSender, OAppAuthReceiver {
     /**
      * @dev Constructor to initialize the OApp with the provided endpoint and owner.
      * @param _endpoint The address of the LOCAL LayerZero endpoint.
      * @param _delegate The delegate capable of making OApp configurations inside of the endpoint.
      */
     constructor(address _endpoint, address _delegate, address _owner, address _authority)
-        OAppCore(_endpoint, _delegate, _owner, _authority)
+        OAppAuthCore(_endpoint, _delegate, _owner, _authority)
     {}
 
     /**
@@ -33,7 +33,7 @@ abstract contract OAppAuth is OAppSender, OAppReceiver {
         public
         pure
         virtual
-        override(OAppSender, OAppReceiver)
+        override(OAppAuthSender, OAppAuthReceiver)
         returns (uint64 senderVersion, uint64 receiverVersion)
     {
         return (SENDER_VERSION, RECEIVER_VERSION);
