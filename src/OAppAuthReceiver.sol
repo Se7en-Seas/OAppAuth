@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.20;
 
-import {IOAppReceiver, Origin} from "./interfaces/IOAppReceiver.sol";
+import {IOAppReceiver, Origin} from "@lz-oapp-evm/interfaces/IOAppReceiver.sol";
 import {OAppAuthCore} from "./OAppAuthCore.sol";
 
 /**

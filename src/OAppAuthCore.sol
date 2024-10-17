@@ -3,7 +3,7 @@
 pragma solidity ^0.8.20;
 
 import {Auth, Authority} from "@solmate/auth/Auth.sol";
-import {IOAppCore, ILayerZeroEndpointV2} from "./interfaces/IOAppCore.sol";
+import {IOAppCore, ILayerZeroEndpointV2} from "@lz-oapp-evm/interfaces/IOAppCore.sol";
 
 /**
  * @title OAppCore
