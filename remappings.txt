@@ -4,7 +4,6 @@
 ds-test/=lib/forge-std/lib/ds-test/src/
 @devtools-oapp-evm/=lib/devtools/packages/oapp-evm/contracts/oapp
 @lz-oapp-evm/=lib/LayerZero-V2/packages/layerzero-v2/evm/oapp/contracts/oapp
-@ccip=lib/ccip/
 
 @layerzerolabs/oapp-evm/=lib/devtools/packages/oapp-evm/
 @layerzerolabs/lz-evm-protocol-v2/=lib/layerzero-v2/packages/layerzero-v2/evm/protocol
