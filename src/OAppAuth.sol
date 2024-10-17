@@ -1,14 +1,41 @@
-// SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+// SPDX-License-Identifier: MIT
 
-contract Counter {
-    uint256 public number;
+pragma solidity ^0.8.20;
 
-    function setNumber(uint256 newNumber) public {
-        number = newNumber;
-    }
+// @dev Import the 'MessagingFee' and 'MessagingReceipt' so it's exposed to OApp implementers
+// solhint-disable-next-line no-unused-import
+import {OAppSender, MessagingFee, MessagingReceipt} from "./OAppAuthSender.sol";
+// @dev Import the 'Origin' so it's exposed to OApp implementers
+// solhint-disable-next-line no-unused-import
+import {OAppReceiver, Origin} from "./OAppAuthReceiver.sol";
+import {OAppCore} from "./OAppAuthCore.sol";
 
-    function increment() public {
-        number++;
+/**
+ * @title OApp
+ * @dev Abstract contract serving as the base for OApp implementation, combining OAppSender and OAppReceiver functionality.
+ */
+abstract contract OAppAuth is OAppSender, OAppReceiver {
+    /**
+     * @dev Constructor to initialize the OApp with the provided endpoint and owner.
+     * @param _endpoint The address of the LOCAL LayerZero endpoint.
+     * @param _delegate The delegate capable of making OApp configurations inside of the endpoint.
+     */
+    constructor(address _endpoint, address _delegate, address _owner, address _authority)
+        OAppCore(_endpoint, _delegate, _owner, _authority)
+    {}
+
+    /**
+     * @notice Retrieves the OApp version information.
+     * @return senderVersion The version of the OAppSender.sol implementation.
+     * @return receiverVersion The version of the OAppReceiver.sol implementation.
+     */
+    function oAppVersion()
+        public
+        pure
+        virtual
+        override(OAppSender, OAppReceiver)
+        returns (uint64 senderVersion, uint64 receiverVersion)
+    {
+        return (SENDER_VERSION, RECEIVER_VERSION);
     }
 }
