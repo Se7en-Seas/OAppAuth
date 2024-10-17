@@ -3,7 +3,7 @@
 	url = https://github.com/foundry-rs/forge-std
 [submodule "lib/devtools"]
 	path = lib/devtools
-	url = https://github.com/LayerZero-labs/devtools
+	url = https://github.com/LayerZero-Labs/devtools
 [submodule "lib/solmate"]
 	path = lib/solmate
 	url = https://github.com/transmissions11/solmate
