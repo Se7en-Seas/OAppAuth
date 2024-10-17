@@ -31,6 +31,17 @@ abstract contract OAppAuthReceiver is IOAppReceiver, OAppAuthCore {
     }
 
     /**
+     * @notice Retrieves the address responsible for 'sending' composeMsg's to the Endpoint.
+     * @return sender The address responsible for 'sending' composeMsg's to the Endpoint.
+     *
+     * @dev Applications can optionally choose to implement a separate composeMsg sender that is NOT the bridging layer.
+     * @dev The default sender IS the OApp implementer.
+     */
+    function composeMsgSender() public view virtual returns (address sender) {
+        return address(this);
+    }
+
+    /**
      * @notice Indicates whether an address is an approved composeMsg sender to the Endpoint.
      * @dev _origin The origin information containing the source endpoint and sender address.
      *  - srcEid: The source chain endpoint ID.
