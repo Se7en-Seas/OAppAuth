@@ -20,9 +20,7 @@ abstract contract OAppAuth is OAppAuthSender, OAppAuthReceiver {
      * @param _endpoint The address of the LOCAL LayerZero endpoint.
      * @param _delegate The delegate capable of making OApp configurations inside of the endpoint.
      */
-    constructor(address _endpoint, address _delegate, address _owner, address _authority)
-        OAppAuthCore(_endpoint, _delegate)
-    {}
+    constructor(address _endpoint, address _delegate) OAppAuthCore(_endpoint, _delegate) {}
 
     /**
      * @notice Retrieves the OApp version information.
