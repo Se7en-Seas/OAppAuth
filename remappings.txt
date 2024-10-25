@@ -7,3 +7,6 @@ ds-test/=lib/forge-std/lib/ds-test/src/
 
 @layerzerolabs/oapp-evm/=lib/devtools/packages/oapp-evm/
 @layerzerolabs/lz-evm-protocol-v2/=lib/layerzero-v2/packages/layerzero-v2/evm/protocol
+solidity-bytes-utils/=node_modules/solidity-bytes-utils/
+@openzeppelin/=lib/openzeppelin-contracts/
+@layerzerolabs/lz-evm-messagelib-v2/=node_modules/@layerzerolabs/lz-evm-messagelib-v2/

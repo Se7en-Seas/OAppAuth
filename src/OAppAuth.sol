@@ -10,11 +10,11 @@ import {OAppAuthSender, MessagingFee, MessagingReceipt} from "./OAppAuthSender.s
 import {OAppAuthReceiver, Origin} from "./OAppAuthReceiver.sol";
 import {OAppAuthCore} from "./OAppAuthCore.sol";
 import {OptionsBuilder} from "@layerzerolabs/oapp-evm/contracts/oapp/libs/OptionsBuilder.sol";
+
 /**
  * @title OApp
  * @dev Abstract contract serving as the base for OApp implementation, combining OAppSender and OAppReceiver functionality.
  */
-
 abstract contract OAppAuth is OAppAuthSender, OAppAuthReceiver {
     /**
      * @dev Constructor to initialize the OApp with the provided endpoint and owner.

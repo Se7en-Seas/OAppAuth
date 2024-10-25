@@ -14,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@layerzerolabs/solidity-bytes-utils": "^0.8.0"
+    "@layerzerolabs/lz-evm-messagelib-v2": "^3.0.7",
+    "solidity-bytes-utils": "^0.8.2"
   }
 }
