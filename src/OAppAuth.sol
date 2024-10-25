@@ -9,7 +9,6 @@ import {OAppAuthSender, MessagingFee, MessagingReceipt} from "./OAppAuthSender.s
 // solhint-disable-next-line no-unused-import
 import {OAppAuthReceiver, Origin} from "./OAppAuthReceiver.sol";
 import {OAppAuthCore} from "./OAppAuthCore.sol";
-import {OptionsBuilder} from "@layerzerolabs/oapp-evm/contracts/oapp/libs/OptionsBuilder.sol";
 
 /**
  * @title OApp
