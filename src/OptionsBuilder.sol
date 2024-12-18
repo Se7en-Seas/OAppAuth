@@ -3,7 +3,7 @@
 pragma solidity ^0.8.20;
 
 import {SafeCast} from "@openzeppelin/contracts/utils/math/SafeCast.sol";
-import {BytesLib} from "lib/solidity-bytes-utils/contracts/BytesLib.sol";
+import {BytesLib} from "@sbu/contracts/BytesLib.sol";
 
 library OptionsBuilder {
     using SafeCast for uint256;

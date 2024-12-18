@@ -10,3 +10,4 @@ ds-test/=lib/forge-std/lib/ds-test/src/
 solidity-bytes-utils/=node_modules/solidity-bytes-utils/
 @openzeppelin/=lib/openzeppelin-contracts/
 @layerzerolabs/lz-evm-messagelib-v2/=node_modules/@layerzerolabs/lz-evm-messagelib-v2/
+@sbu/=lib/solidity-bytes-utils/
